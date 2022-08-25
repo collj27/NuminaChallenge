@@ -21,13 +21,12 @@ def fetch_csv():
 
     return df
 
-
 def get_hour_interval(x):
     return int(x[:2])
 
-@app.route('/')
+@app.route('/test')
 def hello_world():
-    return "hello world"
+    return {"name": "hello world"}
 
 @app.route('/volume/<detected_class>')
 def get_volume_by_detected_class(detected_class):
@@ -43,9 +42,11 @@ def get_volume_by_detected_class(detected_class):
 
     # drop columns and get unique track ids for given hour
     volume_df = class_df.drop(columns=['time', 'class'])
-    volume_df = volume_df.groupby(['hour']).nunique()
+    volume_df = volume_df.groupby('hour', as_index=False).nunique().cumsum().rename(columns={"trackid": "volume"})
 
-    return volume_df.to_json()
+    print(volume_df.head())
+
+    return volume_df.to_json(orient='records')
 
 @app.route('/detections/<trackid>')
 def get_detections_by_track_id(track_id):
