@@ -64,7 +64,7 @@ All api requests will be proxied to http://localhost:5000/. If you use a differe
 
 ### Troubleshoot AWS S3 Download
 
-I attempted to fetch the csv file from s3 using boto3. I received some permissions errors and opted to read the file from my local filesystem rather than wasting too much time wrestling with it.
+I attempted to fetch the csv file from s3 using boto3. I received some permission errors and opted to read the file from my local filesystem rather than wasting too much time wrestling with it.
 
 ### Troublshoot Docker Container
 
