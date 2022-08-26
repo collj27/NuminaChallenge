@@ -78,13 +78,9 @@ With more time, I would've followed this tutorial to setup the line graph of the
  
 ### Restructure Front End
  
+App.js can be broken into more modular components. Rather than having two API calls in the useEffect hook, there could be two child components (one for bicycle volume and one for pedestrian) that call the API and return the data to be rendered by a parent component.
+ 
 ### Add Defensive Code
  
 Currently, there are no validity checks for class types and track ids. Error messages for invalid inputs should be added to help debugging and improve user experience. 
  
-
-
-
-
-Use observables/promises; restructure front end
-
