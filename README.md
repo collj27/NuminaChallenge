@@ -47,6 +47,10 @@ To request the track points for a given track id, replace {{trackid}} with a val
 --header "Content-Type: application/json" \
 http://127.0.0.1:5000/detections/{{trackid}}
 
+You should get a response similar to below:
+
+ ![curl_requests](https://user-images.githubusercontent.com/42978742/186973356-f22dcf91-ba3a-44fd-8235-fda77a31e389.png)
+
 ### Starting the web server
 
 In another terminal window, navigate to the "/client" subfolder and run:
@@ -54,10 +58,11 @@ In another terminal window, navigate to the "/client" subfolder and run:
 
 ### Viewing the client
 
-If started successfully, you can view the client at http://localhost:3000/. You should see the JSON API responses for the pedestrian volume and bicycle volume.
+If started successfully, you can view the client at http://localhost:3000/. You should see the JSON API responses for the pedestrian volume and bicycle volume, similar to below:
+
+![react_ui](https://user-images.githubusercontent.com/42978742/186973357-911c7fcc-db74-4825-b27b-1de5a1e5aeda.png)
 
 All api requests will be proxied to http://localhost:5000/. If you use a different port for your flask server, make sure to update "proxy" in package.json.
-
 
 ## Next Steps
 
@@ -83,4 +88,4 @@ App.js can be broken into more modular components. Rather than having two API ca
 ### Add Defensive Code
  
 Currently, there are no validity checks for class types and track ids. Error messages for invalid inputs should be added to help debugging and improve user experience. 
- 
+
