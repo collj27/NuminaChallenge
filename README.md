@@ -11,7 +11,7 @@
 
 ## Setup
 
-### Cloning the repo and download data.csv
+### Clone the repo and download data.csv
 First, clone the repository: git clone https://github.com/collj27/NuminaChallenge.git
 
 Download data.csv from the provided link. Open "/api/utils.py" and update the "file" variable in the "fetch_csv()" method to point to your local system.
