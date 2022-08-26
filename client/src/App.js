@@ -7,15 +7,14 @@ function App() {
     const [bicycleVolume, setBicycleVolume] = useState([]);
 
     useEffect(() => {
-        // Using fetch to fetch the api from
-        // flask server it will be redirected to proxy
+        // fetch pedestrian volume
         fetch("/volume/pedestrian")
             .then((res) => res.json()
                 .then((volume) => {
                     setPedestrianVolume(volume);
                 })
             );
-
+        // fetch bicycle volume
         fetch("/volume/bicycle")
             .then((res) => res.json()
                 .then((volume) => {
