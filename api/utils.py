@@ -4,11 +4,12 @@ import pandas as pd
 def fetch_csv():
     """
     Ran into permissions issues when attempting to download from s3 and opted to read csv locally due to time constraints
+    Removed bucket name since repo is public
     """
     # file_name = "data.csv"
     # s3 = boto3.resource('s3')
     # output = f"downloads/{file_name}"
-    # bucket = "numina-take-home-interview.s3.us-east-2.amazonaws.com"
+    # bucket = ""
     # s3.Bucket(bucket).download_file(file_name, output)
 
     file = "/Users/james/downloads/data.csv"
