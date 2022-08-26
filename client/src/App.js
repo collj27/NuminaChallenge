@@ -18,7 +18,6 @@ function App() {
         fetch("/volume/bicycle")
             .then((res) => res.json()
                 .then((volume) => {
-                    // Setting a data from api
                     setBicycleVolume(volume);
                 })
             );
