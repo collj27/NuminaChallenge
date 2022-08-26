@@ -41,7 +41,7 @@ To request the volume of a given class, replace {{class}} with a valid object (i
 --header "Content-Type: application/json" \
 http://127.0.0.1:5000/volume/{{class}}
 
-To request the track points for a given track id, replace {{trackid}} and run the following in terminal:
+To request the track points for a given track id, replace {{trackid}} with a valid id and run the following in terminal:
 - curl --request GET \
 --header "Accept:application/json" \
 --header "Content-Type: application/json" \
