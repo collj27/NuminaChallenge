@@ -34,18 +34,18 @@ This will run the "start-api" script located in package.json. Alternatively, you
 
 ### Requesting data from the api
 
-To request the volume of a given class, replace <class> with a valid object (i.e. pedestrian) and run the following command in terminal:
+To request the volume of a given class, replace {{class}} with a valid object (i.e. pedestrian) and run the following command in terminal:
  
 - curl --request GET \
 --header "Accept:application/json" \
 --header "Content-Type: application/json" \
-http://127.0.0.1:5000/volume/<class>
+http://127.0.0.1:5000/volume/{{class}}
 
-To request the track points for a given track id, replace <trackid> and run the following in terminal:
+To request the track points for a given track id, replace {{trackid}} and run the following in terminal:
 - curl --request GET \
 --header "Accept:application/json" \
 --header "Content-Type: application/json" \
-http://127.0.0.1:5000/detections/<trackid>
+http://127.0.0.1:5000/detections/{{trackid}}
 
 ### Starting the web server
 
