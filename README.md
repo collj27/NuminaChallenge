@@ -11,10 +11,10 @@
 
 ## Setup
 
-### Cloning the repo
+### Cloning the repo and download data.csv
 First, clone the repository: git clone https://github.com/collj27/NuminaChallenge.git
 
-Download data.csv from https://numina-take-home-interview.s3.us-east-2.amazonaws.com/data.csv. Open "/api/utils.py" and update the "file" variable in the "fetch_csv()" method to point to your local system.
+Download data.csv from the provided link. Open "/api/utils.py" and update the "file" variable in the "fetch_csv()" method to point to your local system.
 
 ### Installing API packages
 In a terminal window, navigate to the "/api" subfolder, create a virtual environment, and install the required packages with:
